@@ -1,0 +1,30 @@
+.ds-segmented {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-segmented__item {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--color-text-subtle);
+  cursor: pointer;
+  transition:
+    background 120ms ease,
+    color 120ms ease;
+}
+.ds-segmented__item:hover {
+  color: var(--color-text-default);
+}
+.ds-segmented__item--active {
+  background: var(--color-bg-default);
+  color: var(--color-text-default);
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}

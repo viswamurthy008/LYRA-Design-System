@@ -1,0 +1,29 @@
+@keyframes ds-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ds-spinner {
+  display: inline-block;
+  border-radius: var(--radius-full);
+  border-style: solid;
+  border-color: var(--color-bg-muted);
+  border-top-color: var(--color-action-primary);
+  animation: ds-spin 700ms linear infinite;
+}
+.ds-spinner--sm {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+}
+.ds-spinner--md {
+  width: 32px;
+  height: 32px;
+  border-width: 3px;
+}
+.ds-spinner--lg {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}

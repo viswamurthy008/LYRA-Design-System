@@ -1,0 +1,92 @@
+.ds-stepper-flow {
+  display: flex;
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-stepper-flow--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.ds-stepper-flow--vertical {
+  flex-direction: column;
+}
+
+.ds-step {
+  display: flex;
+  gap: var(--spacing-3);
+}
+.ds-stepper-flow--horizontal .ds-step {
+  flex: 1;
+}
+.ds-stepper-flow--vertical .ds-step {
+  flex-direction: row;
+}
+
+.ds-step__rail {
+  display: flex;
+  align-items: center;
+}
+.ds-stepper-flow--vertical .ds-step__rail {
+  flex-direction: column;
+}
+
+.ds-step__marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  background: var(--color-bg-muted);
+  color: var(--color-text-subtle);
+}
+.ds-step__line {
+  background: var(--color-border-default);
+}
+.ds-stepper-flow--horizontal .ds-step__line {
+  height: 2px;
+  flex: 1;
+  margin: 0 8px;
+}
+.ds-stepper-flow--vertical .ds-step__line {
+  width: 2px;
+  flex: 1;
+  margin: 4px 0;
+  min-height: 24px;
+}
+
+.ds-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 4px;
+}
+.ds-stepper-flow--vertical .ds-step__content {
+  padding-bottom: 20px;
+}
+.ds-step__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-default);
+}
+.ds-step__desc {
+  font-size: 13px;
+  color: var(--color-text-subtle);
+}
+
+/* States */
+.ds-step--done .ds-step__marker {
+  background: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+.ds-step--current .ds-step__marker {
+  background: var(--color-bg-default);
+  color: var(--color-text-brand);
+  border: 2px solid var(--color-border-brand);
+}
+.ds-step--upcoming .ds-step__title {
+  color: var(--color-text-subtle);
+  font-weight: 400;
+}

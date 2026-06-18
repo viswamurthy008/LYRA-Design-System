@@ -1,0 +1,45 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Design-system semantic tokens — mirrors the Figma "Color" collection.
+   Values match design-tokens/ (single Light mode). Registering them in
+   @theme exposes utility classes: bg-brand, text-fg-subtle, border-line,
+   bg-success-subtle, etc. Use THESE in components — never raw blue-600/slate-200.
+   ────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Surfaces (bg/*) */
+  --color-surface: #ffffff; /* bg/default      */
+  --color-surface-subtle: #f9fafb; /* bg/subtle       */
+  --color-surface-muted: #f3f4f6; /* bg/muted        */
+
+  /* Brand / action (bg-brand, action/primary) */
+  --color-brand: #2563eb; /* blue-600        */
+  --color-brand-hover: #1d4ed8; /* blue-700        */
+  --color-brand-pressed: #1e40af; /* blue-800        */
+  --color-brand-subtle: #eff6ff; /* blue-50         */
+
+  /* Foreground / text (text/*) */
+  --color-fg: #111827; /* text/default     */
+  --color-fg-subtle: #4b5563; /* text/subtle      */
+  --color-fg-muted: #6b7280; /* text/placeholder */
+  --color-fg-disabled: #d1d5db; /* text/disabled    */
+  --color-fg-inverse: #ffffff; /* text/inverse     */
+  --color-fg-brand: #2563eb; /* text/brand       */
+
+  /* Status — strong text + subtle backgrounds */
+  --color-success: #15803d;
+  --color-success-subtle: #dcfce7;
+  --color-warning: #a16207;
+  --color-warning-subtle: #fef9c3;
+  --color-danger: #b91c1c;
+  --color-danger-subtle: #fee2e2;
+
+  /* Lines / borders (border/*) */
+  --color-line: #e5e7eb; /* border/default  */
+  --color-line-strong: #9ca3af; /* border/strong   */
+  --color-line-brand: #3b82f6; /* border/brand    */
+
+  /* Radius (radius/*) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}

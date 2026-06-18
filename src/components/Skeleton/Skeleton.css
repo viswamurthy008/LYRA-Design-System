@@ -1,0 +1,15 @@
+@keyframes ds-skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.ds-skeleton {
+  display: block;
+  background: var(--color-bg-muted);
+  animation: ds-skeleton-pulse 1.4s ease-in-out infinite;
+}

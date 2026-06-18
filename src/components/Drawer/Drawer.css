@@ -1,0 +1,48 @@
+.ds-drawer__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  background: rgba(17, 24, 39, 0.45);
+}
+.ds-drawer {
+  font-family: Inter, system-ui, sans-serif;
+  width: 360px;
+  max-width: 90vw;
+  height: 100%;
+  background: var(--color-bg-default);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.ds-drawer--right {
+  margin-left: auto;
+}
+.ds-drawer--left {
+  margin-right: auto;
+}
+.ds-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-5) var(--spacing-6);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.ds-drawer__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-default);
+}
+.ds-drawer__close {
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--color-text-subtle);
+  cursor: pointer;
+}
+.ds-drawer__body {
+  padding: var(--spacing-6);
+  overflow-y: auto;
+  flex: 1;
+}

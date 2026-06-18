@@ -1,0 +1,61 @@
+.ds-carousel {
+  position: relative;
+  width: 100%;
+}
+.ds-carousel__viewport {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.ds-carousel__track {
+  display: flex;
+  transition: transform 300ms ease;
+}
+.ds-carousel__slide {
+  flex: 0 0 100%;
+}
+
+.ds-carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-default);
+  color: var(--color-icon-default);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.18);
+}
+.ds-carousel__nav--prev {
+  left: 16px;
+}
+.ds-carousel__nav--next {
+  right: 16px;
+}
+
+.ds-carousel__dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+.ds-carousel__dot {
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: width 200ms ease;
+}
+.ds-carousel__dot--active {
+  width: 20px;
+  background: var(--color-bg-default);
+}

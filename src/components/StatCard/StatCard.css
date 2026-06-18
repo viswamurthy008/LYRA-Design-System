@@ -1,0 +1,39 @@
+.ds-statcard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  width: 240px;
+  padding: var(--spacing-5);
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.05);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-statcard__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+}
+.ds-statcard__value {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-text-default);
+}
+.ds-statcard__foot {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 13px;
+}
+.ds-statcard__delta--up {
+  color: var(--color-text-success);
+  font-weight: 500;
+}
+.ds-statcard__delta--down {
+  color: var(--color-text-danger);
+  font-weight: 500;
+}
+.ds-statcard__helper {
+  color: var(--color-text-subtle);
+}

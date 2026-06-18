@@ -1,0 +1,54 @@
+/* Shared field scaffolding (also defined in Input.css; identical & idempotent). */
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-field__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-default);
+}
+.ds-field__help {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+}
+.ds-field__help--error {
+  color: var(--color-text-danger);
+}
+
+.ds-textarea {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-default);
+  background: var(--color-bg-default);
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  outline: none;
+  resize: vertical;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+.ds-textarea::placeholder {
+  color: var(--color-text-placeholder);
+}
+.ds-textarea:focus {
+  border-color: var(--color-border-brand);
+  box-shadow: 0 0 0 3px var(--color-bg-brand-subtle);
+}
+.ds-textarea--error {
+  border-color: var(--color-border-danger);
+}
+.ds-textarea--error:focus {
+  box-shadow: 0 0 0 3px var(--color-bg-danger);
+}
+.ds-textarea--disabled {
+  background: var(--color-bg-muted);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  resize: none;
+}

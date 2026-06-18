@@ -1,0 +1,102 @@
+.ds-calendar {
+  width: 760px;
+  max-width: 100%;
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-calendar__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4) var(--spacing-5);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.ds-calendar__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-default);
+}
+.ds-calendar__nav button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-icon-default);
+  font-size: 16px;
+  cursor: pointer;
+}
+.ds-calendar__nav button:hover {
+  background: var(--color-bg-muted);
+}
+.ds-calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.ds-calendar__weekdays span {
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+}
+.ds-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.ds-calendar__cell {
+  min-height: 96px;
+  padding: 6px;
+  border-right: 1px solid var(--color-border-default);
+  border-bottom: 1px solid var(--color-border-default);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.ds-calendar__cell:nth-child(7n) {
+  border-right: none;
+}
+.ds-calendar__cell--empty {
+  background: var(--color-bg-subtle);
+}
+.ds-calendar__date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-default);
+  padding: 2px 4px;
+}
+.ds-calendar__date--today {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+.ds-calendar__event {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ds-calendar__event--brand {
+  background: var(--color-bg-brand-subtle);
+  color: var(--color-text-brand);
+}
+.ds-calendar__event--success {
+  background: var(--color-bg-success);
+  color: var(--color-text-success);
+}
+.ds-calendar__event--danger {
+  background: var(--color-bg-danger);
+  color: var(--color-text-danger);
+}

@@ -1,0 +1,52 @@
+.ds-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  width: 100%;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+.ds-banner__message {
+  font-weight: 500;
+}
+.ds-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+.ds-banner__action {
+  border: none;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ds-banner__dismiss {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.ds-banner--info {
+  background: var(--color-bg-brand-subtle);
+  color: var(--color-text-brand);
+}
+.ds-banner--success {
+  background: var(--color-bg-success);
+  color: var(--color-text-success);
+}
+.ds-banner--warning {
+  background: var(--color-bg-warning);
+  color: var(--color-text-warning);
+}
+.ds-banner--error {
+  background: var(--color-bg-danger);
+  color: var(--color-text-danger);
+}

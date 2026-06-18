@@ -1,0 +1,40 @@
+.ds-pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-pagination__nav,
+.ds-pagination__page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: none;
+  font-size: 14px;
+  color: var(--color-text-default);
+  cursor: pointer;
+}
+.ds-pagination__nav {
+  border-color: var(--color-border-default);
+  color: var(--color-icon-default);
+}
+.ds-pagination__nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.ds-pagination__page:hover {
+  background: var(--color-bg-muted);
+}
+.ds-pagination__page--active {
+  background: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  font-weight: 500;
+}
+.ds-pagination__page--active:hover {
+  background: var(--color-action-primary);
+}

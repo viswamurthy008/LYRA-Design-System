@@ -1,0 +1,50 @@
+.ds-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--color-text-default);
+  cursor: pointer;
+}
+.ds-toggle--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ds-toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ds-toggle__track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background: var(--color-border-strong);
+  transition: background 140ms ease;
+  flex-shrink: 0;
+}
+.ds-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-default);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 140ms ease;
+}
+.ds-toggle__input:checked + .ds-toggle__track {
+  background: var(--color-action-primary);
+}
+.ds-toggle__input:checked + .ds-toggle__track .ds-toggle__thumb {
+  transform: translateX(18px);
+}
+.ds-toggle__input:focus-visible + .ds-toggle__track {
+  box-shadow: 0 0 0 3px var(--color-bg-brand-subtle);
+}

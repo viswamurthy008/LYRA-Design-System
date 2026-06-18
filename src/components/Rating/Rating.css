@@ -1,0 +1,20 @@
+.ds-rating {
+  display: inline-flex;
+  gap: 2px;
+}
+.ds-rating__star {
+  border: none;
+  background: none;
+  padding: 0 2px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--color-border-strong);
+  cursor: pointer;
+  transition: color 100ms ease;
+}
+.ds-rating__star--filled {
+  color: var(--color-text-warning);
+}
+.ds-rating__star:disabled {
+  cursor: default;
+}

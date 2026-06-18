@@ -1,0 +1,35 @@
+.ds-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  color: var(--color-text-default);
+  border: 1px solid transparent;
+}
+.ds-chip--selected {
+  background: var(--color-bg-brand-subtle);
+  color: var(--color-text-brand);
+  border-color: var(--color-border-brand);
+}
+.ds-chip__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: none;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.ds-chip__remove:hover {
+  opacity: 1;
+}

@@ -1,0 +1,20 @@
+.ds-btn-group {
+  display: inline-flex;
+}
+.ds-btn-group > .ds-btn {
+  border-radius: 0;
+}
+.ds-btn-group > .ds-btn:not(:first-child) {
+  margin-left: -1px;
+}
+.ds-btn-group > .ds-btn:first-child {
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+.ds-btn-group > .ds-btn:last-child {
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+.ds-btn-group > .ds-btn:hover {
+  z-index: 1;
+}

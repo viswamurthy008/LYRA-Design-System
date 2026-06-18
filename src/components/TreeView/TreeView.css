@@ -1,0 +1,31 @@
+.ds-tree,
+.ds-tree__children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-tree__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text-default);
+  cursor: pointer;
+}
+.ds-tree__row:hover {
+  background: var(--color-bg-subtle);
+}
+.ds-tree__caret {
+  color: var(--color-icon-subtle);
+  font-size: 11px;
+  transition: transform 120ms ease;
+}
+.ds-tree__caret--open {
+  transform: rotate(90deg);
+}
+.ds-tree__caret--hidden {
+  visibility: hidden;
+}

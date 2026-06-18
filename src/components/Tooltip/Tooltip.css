@@ -1,0 +1,53 @@
+.ds-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+.ds-tooltip__trigger {
+  display: inline-flex;
+}
+
+.ds-tooltip__bubble {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-inverse);
+  background: var(--color-text-default);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 120ms ease;
+  pointer-events: none;
+}
+.ds-tooltip__bubble--top {
+  bottom: calc(100% + 8px);
+}
+.ds-tooltip__bubble--bottom {
+  top: calc(100% + 8px);
+}
+.ds-tooltip__bubble::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+}
+.ds-tooltip__bubble--top::after {
+  top: 100%;
+  border-top-color: var(--color-text-default);
+}
+.ds-tooltip__bubble--bottom::after {
+  bottom: 100%;
+  border-bottom-color: var(--color-text-default);
+}
+
+.ds-tooltip:hover .ds-tooltip__bubble,
+.ds-tooltip:focus-within .ds-tooltip__bubble {
+  opacity: 1;
+  visibility: visible;
+}

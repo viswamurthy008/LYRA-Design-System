@@ -1,0 +1,30 @@
+.ds-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--color-bg-default);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-lg);
+  max-width: 320px;
+}
+.ds-card--default {
+  border: 1px solid var(--color-border-default);
+}
+.ds-card--elevated {
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+}
+
+.ds-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-default);
+}
+.ds-card__body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-subtle);
+}

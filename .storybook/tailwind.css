@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* Design-system semantic token layer → registers bg-brand, text-fg,
+   border-line, bg-success-subtle, etc. as Tailwind utilities. */
+@import "../src/styles/theme.css";

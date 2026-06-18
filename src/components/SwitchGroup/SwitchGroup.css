@@ -1,0 +1,32 @@
+.ds-switch-group {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, system-ui, sans-serif;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.ds-switch-group__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  padding: 14px 16px;
+}
+.ds-switch-group__row + .ds-switch-group__row {
+  border-top: 1px solid var(--color-border-default);
+}
+.ds-switch-group__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ds-switch-group__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-default);
+}
+.ds-switch-group__desc {
+  font-size: 13px;
+  color: var(--color-text-subtle);
+}

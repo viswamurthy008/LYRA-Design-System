@@ -1,0 +1,17 @@
+.ds-link {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.ds-link:hover {
+  color: var(--color-action-primary-hover);
+}
+.ds-link:focus-visible {
+  outline: 2px solid var(--color-border-brand);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

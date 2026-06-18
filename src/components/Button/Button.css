@@ -1,0 +1,61 @@
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease;
+}
+.ds-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.ds-btn--sm {
+  font-size: 13px;
+  padding: 6px 12px;
+}
+.ds-btn--md {
+  font-size: 14px;
+  padding: 9px 16px;
+}
+.ds-btn--lg {
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+/* Variants */
+.ds-btn--primary {
+  background: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+.ds-btn--primary:hover:not(:disabled) {
+  background: var(--color-action-primary-hover);
+}
+.ds-btn--primary:active:not(:disabled) {
+  background: var(--color-action-primary-pressed);
+}
+
+.ds-btn--secondary {
+  background: var(--color-bg-muted);
+  color: var(--color-text-default);
+}
+.ds-btn--secondary:hover:not(:disabled) {
+  background: var(--color-bg-subtle);
+}
+
+.ds-btn--ghost {
+  background: transparent;
+  color: var(--color-text-brand);
+  border-color: var(--color-border-brand);
+}
+.ds-btn--ghost:hover:not(:disabled) {
+  background: var(--color-bg-brand-subtle);
+}

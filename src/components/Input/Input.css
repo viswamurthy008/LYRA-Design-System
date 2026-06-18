@@ -1,0 +1,51 @@
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-field__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-default);
+}
+.ds-field__help {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+}
+.ds-field__help--error {
+  color: var(--color-text-danger);
+}
+
+.ds-input {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-text-default);
+  background: var(--color-bg-default);
+  padding: 9px 12px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+.ds-input::placeholder {
+  color: var(--color-text-placeholder);
+}
+.ds-input:focus,
+.ds-input--default:focus {
+  border-color: var(--color-border-brand);
+  box-shadow: 0 0 0 3px var(--color-bg-brand-subtle);
+}
+.ds-input--error {
+  border-color: var(--color-border-danger);
+}
+.ds-input--error:focus {
+  box-shadow: 0 0 0 3px var(--color-bg-danger);
+}
+.ds-input--disabled {
+  background: var(--color-bg-muted);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}

@@ -1,0 +1,21 @@
+.ds-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+}
+.ds-breadcrumb__item {
+  color: var(--color-text-subtle);
+  text-decoration: none;
+}
+.ds-breadcrumb__item:hover {
+  color: var(--color-text-default);
+}
+.ds-breadcrumb__item--current {
+  color: var(--color-text-default);
+  font-weight: 500;
+}
+.ds-breadcrumb__sep {
+  color: var(--color-text-placeholder);
+}

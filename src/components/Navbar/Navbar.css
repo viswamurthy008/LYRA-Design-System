@@ -1,0 +1,41 @@
+.ds-navbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  height: 60px;
+  padding: 0 var(--spacing-6);
+  background: var(--color-bg-default);
+  border-bottom: 1px solid var(--color-border-default);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-navbar__brand {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text-default);
+}
+.ds-navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  flex: 1;
+}
+.ds-navbar__item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  text-decoration: none;
+  cursor: pointer;
+}
+.ds-navbar__item:hover {
+  color: var(--color-text-default);
+}
+.ds-navbar__item--active {
+  color: var(--color-text-brand);
+}
+.ds-navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}

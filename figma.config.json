@@ -1,0 +1,9 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "include": ["src/**/*.figma.tsx"],
+    "documentUrlSubstitutions": {
+      "<DS_FILE>": "https://www.figma.com/design/denT663oWnUdzJbXicADXX/Design-System-%E2%80%94-MVP"
+    }
+  }
+}
