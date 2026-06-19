@@ -16,3 +16,6 @@ Thumbs.db
 # misc
 .cc-verify.css
 *.tsbuildinfo
+
+# stray nested clone
+Lyra Design System/
