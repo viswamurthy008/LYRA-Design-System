@@ -1,12 +1,12 @@
-# @acme/design-system
+# lyra-design-system
 
 React + TypeScript component library implementing the Figma **"Design System — MVP"**. Every component is styled with **CSS variables** (design tokens) — no Tailwind, no CSS-in-JS runtime.
 
 ## Install & use
 
 ```tsx
-import { Button, Input, Card, Alert } from '@acme/design-system';
-import '@acme/design-system/styles.css'; // import once, e.g. in your app root
+import { Button, Input, Card, Alert } from 'lyra-design-system';
+import 'lyra-design-system/styles.css'; // import once, e.g. in your app root
 
 function Example() {
   return (
@@ -19,7 +19,7 @@ function Example() {
 ```
 
 > **Import the stylesheet once.** The library ships a single bundled `design-system.css`
-> (tokens + all component styles), exposed as `@acme/design-system/styles.css`. Import it
+> (tokens + all component styles), exposed as `lyra-design-system/styles.css`. Import it
 > at your app entry — components don't inline their own CSS in the built output.
 
 ## How styling works
@@ -58,7 +58,7 @@ npm run cc:publish      # publish Code Connect mappings to Figma (needs auth)
 | `index.js` | ESM bundle (`"module"` / `import`) |
 | `index.cjs` | CommonJS bundle (`"main"` / `require`) |
 | `index.d.ts` (+ per-component `.d.ts`) | TypeScript declarations |
-| `design-system.css` | All tokens + component styles, one file (`@acme/design-system/styles.css`) |
+| `design-system.css` | All tokens + component styles, one file (`lyra-design-system/styles.css`) |
 
 React / ReactDOM are **externalized** (peer deps). `npm publish` runs the build automatically via `prepublishOnly`; only `dist/` is published (`files` field).
 

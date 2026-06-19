@@ -1,7 +1,11 @@
 {
-  "name": "@acme/design-system",
+  "name": "lyra-design-system",
   "version": "0.1.0",
-  "description": "React + TypeScript components for the \"Design System — MVP\" Figma library, wired to design tokens.",
+  "description": "LYRA Design System — React + TypeScript components wired to design tokens, generated from Figma.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viswamurthy008/LYRA-Design-System.git"
+  },
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
