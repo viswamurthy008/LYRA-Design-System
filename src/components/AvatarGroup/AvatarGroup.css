@@ -1,0 +1,48 @@
+.ds-avatar-group {
+  display: inline-flex;
+  align-items: center;
+  font-family: Inter, system-ui, sans-serif;
+}
+/* Overlap + ring so avatars read as a stack */
+.ds-avatar-group__item {
+  display: inline-flex;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 0 2px var(--color-bg-default);
+}
+.ds-avatar-group__item:not(:first-child) {
+  margin-left: -8px;
+}
+.ds-avatar-group__more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-muted);
+  color: var(--color-text-subtle);
+  font-weight: 600;
+}
+.ds-avatar-group__more--xs {
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+}
+.ds-avatar-group__more--sm {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+}
+.ds-avatar-group__more--md {
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+}
+.ds-avatar-group__more--lg {
+  width: 48px;
+  height: 48px;
+  font-size: 14px;
+}
+.ds-avatar-group__more--xl {
+  width: 56px;
+  height: 56px;
+  font-size: 16px;
+}

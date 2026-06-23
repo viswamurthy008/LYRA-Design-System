@@ -47,6 +47,8 @@ export type {
 } from './components/SegmentedControl/SegmentedControl';
 export { Slider } from './components/Slider/Slider';
 export type { SliderProps } from './components/Slider/Slider';
+export { MultiSelect } from './components/MultiSelect/MultiSelect';
+export type { MultiSelectProps, MultiSelectOption } from './components/MultiSelect/MultiSelect';
 
 // ── Pickers ─────────────────────────────────────────────────────────────────
 export { DatePicker } from './components/DatePicker/DatePicker';
@@ -55,6 +57,8 @@ export { TimePicker } from './components/TimePicker/TimePicker';
 export type { TimePickerProps, TimeValue } from './components/TimePicker/TimePicker';
 export { ColorPicker } from './components/ColorPicker/ColorPicker';
 export type { ColorPickerProps } from './components/ColorPicker/ColorPicker';
+export { DateRangePicker } from './components/DateRangePicker/DateRangePicker';
+export type { DateRangePickerProps, DateRange } from './components/DateRangePicker/DateRangePicker';
 
 // ── Data display ──────────────────────────────────────────────────────────--
 export { Card } from './components/Card/Card';
@@ -69,6 +73,8 @@ export { MediaCard } from './components/MediaCard/MediaCard';
 export type { MediaCardProps } from './components/MediaCard/MediaCard';
 export { Avatar } from './components/Avatar/Avatar';
 export type { AvatarProps, AvatarSize } from './components/Avatar/Avatar';
+export { AvatarGroup } from './components/AvatarGroup/AvatarGroup';
+export type { AvatarGroupProps, AvatarGroupItem } from './components/AvatarGroup/AvatarGroup';
 export { Badge } from './components/Badge/Badge';
 export type { BadgeProps, BadgeVariant } from './components/Badge/Badge';
 export { Chip } from './components/Chip/Chip';
@@ -93,6 +99,8 @@ export { Banner } from './components/Banner/Banner';
 export type { BannerProps, BannerType } from './components/Banner/Banner';
 export { Toast } from './components/Toast/Toast';
 export type { ToastProps, ToastType } from './components/Toast/Toast';
+export { CircularProgress } from './components/CircularProgress/CircularProgress';
+export type { CircularProgressProps } from './components/CircularProgress/CircularProgress';
 export { Snackbar } from './components/Snackbar/Snackbar';
 export type { SnackbarProps } from './components/Snackbar/Snackbar';
 export { Tooltip } from './components/Tooltip/Tooltip';
@@ -135,3 +143,9 @@ export { Drawer } from './components/Drawer/Drawer';
 export type { DrawerProps } from './components/Drawer/Drawer';
 export { CommandPalette } from './components/CommandPalette/CommandPalette';
 export type { CommandPaletteProps, Command } from './components/CommandPalette/CommandPalette';
+export { ContextMenu } from './components/ContextMenu/ContextMenu';
+export type { ContextMenuProps, ContextMenuItem } from './components/ContextMenu/ContextMenu';
+
+// ── Layout ──────────────────────────────────────────────────────────────────
+export { AppShell } from './components/AppShell/AppShell';
+export type { AppShellProps } from './components/AppShell/AppShell';

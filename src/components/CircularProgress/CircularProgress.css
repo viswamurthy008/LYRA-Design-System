@@ -1,0 +1,20 @@
+.ds-circprog {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-circprog__track {
+  stroke: var(--color-bg-muted);
+}
+.ds-circprog__fill {
+  stroke: var(--color-action-primary);
+  transition: stroke-dashoffset 300ms ease;
+}
+.ds-circprog__label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-default);
+}

@@ -1,0 +1,85 @@
+.ds-multiselect {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-multiselect__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-default);
+}
+.ds-multiselect__control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 6px 32px 6px 10px;
+  position: relative;
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+.ds-multiselect__control:focus-within {
+  border-color: var(--color-border-brand);
+}
+.ds-multiselect__placeholder {
+  color: var(--color-text-placeholder);
+  font-size: 14px;
+}
+.ds-multiselect__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px 2px 8px;
+  font-size: 13px;
+  background: var(--color-bg-brand-subtle);
+  color: var(--color-text-brand);
+  border-radius: var(--radius-sm);
+}
+.ds-multiselect__chip-x {
+  border: none;
+  background: none;
+  color: currentColor;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+.ds-multiselect__chevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-icon-subtle);
+  font-size: 12px;
+  pointer-events: none;
+}
+.ds-multiselect__list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.12);
+  max-height: 220px;
+  overflow-y: auto;
+}
+.ds-multiselect__option {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text-default);
+  cursor: pointer;
+}
+.ds-multiselect__option:hover {
+  background: var(--color-bg-subtle);
+}
