@@ -1,7 +1,7 @@
 // ============================================================================
 //  @acme/design-system — public API
 //  React + TypeScript components styled with CSS variables (src/styles/tokens.css).
-//  Mirrors the Figma "Design System — MVP" library. 55 components.
+//  Mirrors the Figma "Design System — MVP" library. 67 components.
 // ============================================================================
 import './styles/tokens.css';
 
@@ -91,6 +91,19 @@ export { DataTable } from './components/DataTable/DataTable';
 export type { DataTableProps, Column } from './components/DataTable/DataTable';
 export { Calendar } from './components/Calendar/Calendar';
 export type { CalendarProps, CalendarEvent } from './components/Calendar/Calendar';
+export { Metric } from './components/Metric/Metric';
+export type { MetricProps } from './components/Metric/Metric';
+export { DescriptionList } from './components/DescriptionList/DescriptionList';
+export type {
+  DescriptionListProps,
+  DescriptionListItem,
+} from './components/DescriptionList/DescriptionList';
+
+// ── Charts ────────────────────────────────────────────────────────────────--
+export { Sparkline } from './components/Sparkline/Sparkline';
+export type { SparklineProps } from './components/Sparkline/Sparkline';
+export { MiniBarChart } from './components/MiniBarChart/MiniBarChart';
+export type { MiniBarChartProps } from './components/MiniBarChart/MiniBarChart';
 
 // ── Feedback ──────────────────────────────────────────────────────────────--
 export { Alert } from './components/Alert/Alert';
@@ -149,3 +162,9 @@ export type { ContextMenuProps, ContextMenuItem } from './components/ContextMenu
 // ── Layout ──────────────────────────────────────────────────────────────────
 export { AppShell } from './components/AppShell/AppShell';
 export type { AppShellProps } from './components/AppShell/AppShell';
+
+// ── Utility ─────────────────────────────────────────────────────────────────
+export { Kbd } from './components/Kbd/Kbd';
+export type { KbdProps } from './components/Kbd/Kbd';
+export { Code } from './components/Code/Code';
+export type { CodeProps } from './components/Code/Code';

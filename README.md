@@ -28,18 +28,20 @@ function Example() {
 - Components reference **semantic** variables only (`var(--color-action-primary)`, `var(--spacing-4)`, `var(--radius-md)`), so re-theming is a one-file change.
 - Each component ships a co-located `Component.css`. Importing the component imports its styles.
 
-## Components (61)
+## Components (67)
 
 | Group | Components |
 |-------|-----------|
 | **Actions** | Button, IconButton, ButtonGroup, Link |
 | **Forms** | Input, Textarea, SearchField, Select, Combobox, MultiSelect, Checkbox, Radio, Toggle, SwitchGroup, NumberStepper, SegmentedControl, Slider |
 | **Pickers** | DatePicker, TimePicker, ColorPicker, DateRangePicker |
-| **Data display** | Card, StatCard, FeatureCard, ProfileCard, MediaCard, Avatar, AvatarGroup, Badge, Chip, Rating, List, Carousel, Divider, DataTable, Calendar |
+| **Data display** | Card, StatCard, FeatureCard, ProfileCard, MediaCard, Avatar, AvatarGroup, Badge, Chip, Rating, List, Carousel, Divider, DataTable, Calendar, Metric, DescriptionList |
+| **Charts** | Sparkline, MiniBarChart |
 | **Feedback** | Alert, Banner, Toast, Snackbar, Tooltip, Popover, Progress, CircularProgress, Spinner, Skeleton, EmptyState |
 | **Navigation** | Tabs, Breadcrumb, Pagination, Accordion, Stepper, Timeline, Navbar, Sidebar, TreeView |
 | **Overlays** | Modal, Drawer, CommandPalette, ContextMenu |
 | **Layout** | AppShell |
+| **Utility** | Kbd, Code |
 
 All are exported from `src/index.ts`, grouped by category, with full TypeScript prop types.
 

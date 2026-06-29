@@ -1,0 +1,12 @@
+.ds-sparkline {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ds-sparkline__line {
+  stroke: var(--color-action-primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ds-sparkline__area {
+  fill: var(--color-bg-brand-subtle);
+}

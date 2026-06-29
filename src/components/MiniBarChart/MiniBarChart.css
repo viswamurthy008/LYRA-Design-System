@@ -1,0 +1,14 @@
+.ds-minibarchart {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+.ds-minibarchart__bar {
+  flex: 1;
+  min-width: 4px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+.ds-minibarchart__bar--active {
+  background: var(--color-action-primary);
+}

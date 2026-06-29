@@ -1,0 +1,31 @@
+.ds-code {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  padding: 2px 6px;
+  background: var(--color-bg-muted);
+  color: var(--color-text-default);
+  border-radius: var(--radius-sm);
+}
+.ds-code-block {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-family: Inter, system-ui, sans-serif;
+  overflow: hidden;
+}
+.ds-code-block__lang {
+  display: block;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.ds-code-block__pre {
+  margin: 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-default);
+}
