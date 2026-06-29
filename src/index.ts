@@ -1,7 +1,7 @@
 // ============================================================================
 //  @acme/design-system — public API
 //  React + TypeScript components styled with CSS variables (src/styles/tokens.css).
-//  Mirrors the Figma "Design System — MVP" library. 67 components.
+//  Mirrors the Figma "Design System — MVP" library. 74 components.
 // ============================================================================
 import './styles/tokens.css';
 
@@ -49,6 +49,12 @@ export { Slider } from './components/Slider/Slider';
 export type { SliderProps } from './components/Slider/Slider';
 export { MultiSelect } from './components/MultiSelect/MultiSelect';
 export type { MultiSelectProps, MultiSelectOption } from './components/MultiSelect/MultiSelect';
+export { FileUpload } from './components/FileUpload/FileUpload';
+export type { FileUploadProps } from './components/FileUpload/FileUpload';
+export { OtpInput } from './components/OtpInput/OtpInput';
+export type { OtpInputProps } from './components/OtpInput/OtpInput';
+export { RangeSlider } from './components/RangeSlider/RangeSlider';
+export type { RangeSliderProps } from './components/RangeSlider/RangeSlider';
 
 // ── Pickers ─────────────────────────────────────────────────────────────────
 export { DatePicker } from './components/DatePicker/DatePicker';
@@ -162,6 +168,14 @@ export type { ContextMenuProps, ContextMenuItem } from './components/ContextMenu
 // ── Layout ──────────────────────────────────────────────────────────────────
 export { AppShell } from './components/AppShell/AppShell';
 export type { AppShellProps } from './components/AppShell/AppShell';
+export { Stack } from './components/Stack/Stack';
+export type { StackProps } from './components/Stack/Stack';
+export { Grid } from './components/Grid/Grid';
+export type { GridProps } from './components/Grid/Grid';
+export { Container } from './components/Container/Container';
+export type { ContainerProps } from './components/Container/Container';
+export { Splitter } from './components/Splitter/Splitter';
+export type { SplitterProps } from './components/Splitter/Splitter';
 
 // ── Utility ─────────────────────────────────────────────────────────────────
 export { Kbd } from './components/Kbd/Kbd';

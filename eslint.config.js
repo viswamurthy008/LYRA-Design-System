@@ -39,6 +39,8 @@ export default tseslint.config(
       'jsx-a11y/click-events-have-key-events': 'warn',
       'jsx-a11y/no-static-element-interactions': 'warn',
       'jsx-a11y/no-noninteractive-element-interactions': 'warn',
+      // A focusable separator is the correct ARIA window-splitter pattern (Splitter handle).
+      'jsx-a11y/no-noninteractive-tabindex': ['warn', { roles: ['tabpanel', 'separator'] }],
       'jsx-a11y/no-autofocus': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': [
