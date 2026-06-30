@@ -1,0 +1,45 @@
+/* Shared chart primitives — imported once via chartUtils. */
+.ds-chart {
+  width: 100%;
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.ds-chart__grid {
+  stroke: var(--color-border-default);
+  stroke-width: 1;
+}
+.ds-chart__axis {
+  fill: var(--color-text-subtle);
+  font-size: 11px;
+}
+.ds-chart__label {
+  fill: var(--color-text-default);
+  font-size: 11px;
+  font-weight: 500;
+}
+.ds-chart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  list-style: none;
+  margin: var(--spacing-2) 0 0;
+  padding: 0;
+}
+.ds-chart__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-text-subtle);
+}
+.ds-chart__legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}

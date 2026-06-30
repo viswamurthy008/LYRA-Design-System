@@ -1,9 +1,10 @@
 // ============================================================================
 //  @acme/design-system — public API
 //  React + TypeScript components styled with CSS variables (src/styles/tokens.css).
-//  Mirrors the Figma "Design System — MVP" library. 74 components.
+//  Mirrors the Figma "Design System — MVP" library. 83 components.
 // ============================================================================
 import './styles/tokens.css';
+import './styles/chart-tokens.css';
 
 // ── Actions ─────────────────────────────────────────────────────────────────
 export { Button } from './components/Button/Button';
@@ -110,6 +111,31 @@ export { Sparkline } from './components/Sparkline/Sparkline';
 export type { SparklineProps } from './components/Sparkline/Sparkline';
 export { MiniBarChart } from './components/MiniBarChart/MiniBarChart';
 export type { MiniBarChartProps } from './components/MiniBarChart/MiniBarChart';
+export { LineChart } from './components/LineChart/LineChart';
+export type { LineChartProps, LineSeries } from './components/LineChart/LineChart';
+export { AreaChart } from './components/AreaChart/AreaChart';
+export type { AreaChartProps, AreaSeries } from './components/AreaChart/AreaChart';
+export { BarChart } from './components/BarChart/BarChart';
+export type { BarChartProps, BarSeries } from './components/BarChart/BarChart';
+export { DonutChart } from './components/DonutChart/DonutChart';
+export type { DonutChartProps, DonutSlice } from './components/DonutChart/DonutChart';
+export { ScatterPlot } from './components/ScatterPlot/ScatterPlot';
+export type { ScatterPlotProps, ScatterSeries } from './components/ScatterPlot/ScatterPlot';
+export { BubbleChart } from './components/BubbleChart/BubbleChart';
+export type { BubbleChartProps, BubbleSeries } from './components/BubbleChart/BubbleChart';
+export { WaterfallChart } from './components/WaterfallChart/WaterfallChart';
+export type {
+  WaterfallChartProps,
+  WaterfallStep,
+} from './components/WaterfallChart/WaterfallChart';
+export { Treemap } from './components/Treemap/Treemap';
+export type { TreemapProps, TreemapItem } from './components/Treemap/Treemap';
+export { SankeyChart } from './components/SankeyChart/SankeyChart';
+export type {
+  SankeyChartProps,
+  SankeyNode,
+  SankeyLink,
+} from './components/SankeyChart/SankeyChart';
 
 // ── Feedback ──────────────────────────────────────────────────────────────--
 export { Alert } from './components/Alert/Alert';
