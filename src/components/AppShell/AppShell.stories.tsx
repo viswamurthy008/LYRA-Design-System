@@ -7,7 +7,7 @@ import { Avatar } from '../Avatar/Avatar';
 import { Button } from '../Button/Button';
 
 const meta: Meta<typeof AppShell> = {
-  title: 'Patterns/Dashboard',
+  title: 'Layout/AppShell',
   component: AppShell,
   parameters: { layout: 'fullscreen' },
 };

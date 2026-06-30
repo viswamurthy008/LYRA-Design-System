@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Card } from './Card';
 
 const meta: Meta<typeof Card> = {
-  title: 'Components/Card',
+  title: 'Data Display/Card',
   component: Card,
   argTypes: { variant: { control: 'inline-radio', options: ['default', 'elevated'] } },
 };
