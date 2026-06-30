@@ -1,6 +1,6 @@
 {
   "name": "lyra-design-system",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "LYRA Design System — React + TypeScript components wired to design tokens, generated from Figma.",
   "repository": {
     "type": "git",
