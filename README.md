@@ -28,18 +28,18 @@ function Example() {
 - Components reference **semantic** variables only (`var(--color-action-primary)`, `var(--spacing-4)`, `var(--radius-md)`), so re-theming is a one-file change.
 - Each component ships a co-located `Component.css`. Importing the component imports its styles.
 
-## Components (83)
+## Components (86)
 
 | Group | Components |
 |-------|-----------|
 | **Actions** | Button, IconButton, ButtonGroup, Link |
-| **Forms** | Input, Textarea, SearchField, Select, Combobox, MultiSelect, Checkbox, Radio, Toggle, SwitchGroup, NumberStepper, SegmentedControl, Slider, RangeSlider, FileUpload, OtpInput |
+| **Forms** | Input, Textarea, SearchField, Select, Combobox, MultiSelect, Checkbox, Radio, Toggle, SwitchGroup, NumberStepper, SegmentedControl, Slider, RangeSlider, FileUpload, OtpInput, FormField |
 | **Pickers** | DatePicker, TimePicker, ColorPicker, DateRangePicker |
 | **Data display** | Card, StatCard, FeatureCard, ProfileCard, MediaCard, Avatar, AvatarGroup, Badge, Chip, Rating, List, Carousel, Divider, DataTable, Calendar, Metric, DescriptionList |
 | **Charts** | Sparkline, MiniBarChart, LineChart, AreaChart, BarChart, DonutChart, ScatterPlot, BubbleChart, WaterfallChart, Treemap, SankeyChart |
-| **Feedback** | Alert, Banner, Toast, Snackbar, Tooltip, Popover, Progress, CircularProgress, Spinner, Skeleton, EmptyState |
+| **Feedback** | Alert, Banner, Toast, Snackbar, Tooltip, Popover, Progress, CircularProgress, Spinner, Skeleton, EmptyState, NotificationCenter |
 | **Navigation** | Tabs, Breadcrumb, Pagination, Accordion, Stepper, Timeline, Navbar, Sidebar, TreeView |
-| **Overlays** | Modal, Drawer, CommandPalette, ContextMenu |
+| **Overlays** | Modal, Drawer, CommandPalette, ContextMenu, Tour |
 | **Layout** | AppShell, Stack, Grid, Container, Splitter |
 | **Utility** | Kbd, Code |
 

@@ -1,7 +1,7 @@
 // ============================================================================
 //  @acme/design-system — public API
 //  React + TypeScript components styled with CSS variables (src/styles/tokens.css).
-//  Mirrors the Figma "Design System — MVP" library. 83 components.
+//  Mirrors the Figma "Design System — MVP" library. 86 components.
 // ============================================================================
 import './styles/tokens.css';
 import './styles/chart-tokens.css';
@@ -56,6 +56,8 @@ export { OtpInput } from './components/OtpInput/OtpInput';
 export type { OtpInputProps } from './components/OtpInput/OtpInput';
 export { RangeSlider } from './components/RangeSlider/RangeSlider';
 export type { RangeSliderProps } from './components/RangeSlider/RangeSlider';
+export { FormField } from './components/FormField/FormField';
+export type { FormFieldProps } from './components/FormField/FormField';
 
 // ── Pickers ─────────────────────────────────────────────────────────────────
 export { DatePicker } from './components/DatePicker/DatePicker';
@@ -160,6 +162,11 @@ export { Skeleton } from './components/Skeleton/Skeleton';
 export type { SkeletonProps } from './components/Skeleton/Skeleton';
 export { EmptyState } from './components/EmptyState/EmptyState';
 export type { EmptyStateProps } from './components/EmptyState/EmptyState';
+export { NotificationCenter } from './components/NotificationCenter/NotificationCenter';
+export type {
+  NotificationCenterProps,
+  NotificationItem,
+} from './components/NotificationCenter/NotificationCenter';
 
 // ── Navigation ────────────────────────────────────────────────────────────--
 export { Tabs } from './components/Tabs/Tabs';
@@ -190,6 +197,8 @@ export { CommandPalette } from './components/CommandPalette/CommandPalette';
 export type { CommandPaletteProps, Command } from './components/CommandPalette/CommandPalette';
 export { ContextMenu } from './components/ContextMenu/ContextMenu';
 export type { ContextMenuProps, ContextMenuItem } from './components/ContextMenu/ContextMenu';
+export { Tour } from './components/Tour/Tour';
+export type { TourProps, TourStep } from './components/Tour/Tour';
 
 // ── Layout ──────────────────────────────────────────────────────────────────
 export { AppShell } from './components/AppShell/AppShell';

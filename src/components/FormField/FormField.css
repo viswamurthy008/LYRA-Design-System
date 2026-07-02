@@ -1,0 +1,28 @@
+.ds-formfield {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-family: Inter, system-ui, sans-serif;
+}
+.ds-formfield__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-default);
+}
+.ds-formfield__required {
+  margin-left: 2px;
+  color: var(--color-text-danger);
+}
+.ds-formfield__hint {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+}
+.ds-formfield__error {
+  font-size: 12px;
+  color: var(--color-text-danger);
+}
+.ds-formfield--error input,
+.ds-formfield--error textarea,
+.ds-formfield--error select {
+  border-color: var(--color-border-danger);
+}
