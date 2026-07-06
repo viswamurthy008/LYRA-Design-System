@@ -9,7 +9,7 @@
 .ds-popover__panel {
   position: absolute;
   left: 0;
-  z-index: 20;
+  z-index: var(--z-dropdown, 20);
   min-width: 220px;
   font-family: Inter, system-ui, sans-serif;
   font-size: 14px;

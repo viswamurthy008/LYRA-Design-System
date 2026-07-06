@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Accessibility" />
+
+# Accessibility
+
+Standards baked into the system, and the contract components are held to.
+
+## Color contrast
+
+- Semantic text tokens are chosen for **WCAG 2.1 AA** on their intended backgrounds:
+  `--color-text-default` (gray-900) and `--color-text-subtle` (gray-600) pass 4.5:1 on
+  `--color-bg-default/subtle/muted`. `--color-text-placeholder` and `--color-icon-subtle` were
+  deliberately remapped from gray-400 → gray-500 to reach AA.
+- Status text tokens (`-success/-warning/-danger`) use the 700-weight shades on their subtle
+  tints for the same reason.
+- Never place `-subtle` text on `-brand` fills; use `--color-text-inverse`.
+
+## Focus
+
+- Every interactive element shows a visible focus state — either `:focus-visible` outlines using
+  `--color-border-brand`, or a `box-shadow` ring (`--color-bg-brand-subtle`).
+- Focus is never removed with `outline: none` without a replacement indicator.
+
+## Keyboard support (per pattern)
+
+| Pattern | Keys |
+|---|---|
+| Buttons, links, toggles | `Tab`, `Enter`/`Space` |
+| Modal / Drawer / CommandPalette | `Esc` closes; focus should return to the trigger |
+| DatePicker / DateRangePicker / Calendar | Buttons per day — `Tab` + `Enter` |
+| Splitter | Handle is a focusable `separator`; `←`/`→` resize |
+| OtpInput | Digits auto-advance; `Backspace` moves back |
+| Tour | `Skip`/`Back`/`Next` buttons; backdrop click closes |
+
+## ARIA conventions used
+
+- `FormField` clones its child control to inject `id`, `aria-describedby` (hint/error) and
+  `aria-invalid` — pair it with any input for free wiring.
+- Overlays use `role="dialog"` + `aria-label`; menus use `role="menu"/"option"` as appropriate;
+  charts are `role="img"` with an `aria-label` naming the chart type.
+- Live feedback (`FormField` errors) uses `role="alert"`.
+
+## Motion
+
+`foundation-tokens.css` zeroes transition durations under `prefers-reduced-motion: reduce`.
+Loaders (Spinner, Skeleton) keep animating because they communicate state.
+
+## Known gaps (tracked)
+
+The ~24 accepted lint warnings mark real keyboard limitations, kept as warnings deliberately:
+
+- `MultiSelect` and `ContextMenu` option lists are click-only (no arrow-key navigation yet).
+- Overlay backdrops close on click without a keyboard equivalent beyond `Esc`.
+- `DataTable` sortable headers rely on click.
+
+Treat these as the contribution backlog — see `CONTRIBUTING.md`.

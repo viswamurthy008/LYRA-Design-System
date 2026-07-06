@@ -10,7 +10,7 @@
 }
 .ds-circprog__fill {
   stroke: var(--color-action-primary);
-  transition: stroke-dashoffset 300ms ease;
+  transition: stroke-dashoffset var(--motion-duration-slow, 300ms) ease;
 }
 .ds-circprog__label {
   position: absolute;

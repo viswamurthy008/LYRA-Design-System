@@ -10,7 +10,7 @@
   line-height: 1;
   color: var(--color-border-strong);
   cursor: pointer;
-  transition: color 100ms ease;
+  transition: color var(--motion-duration-fast, 120ms) ease;
 }
 .ds-rating__star--filled {
   color: var(--color-text-warning);

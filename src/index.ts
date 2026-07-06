@@ -4,6 +4,7 @@
 //  Mirrors the Figma "Design System — MVP" library. 86 components.
 // ============================================================================
 import './styles/tokens.css';
+import './styles/foundation-tokens.css';
 import './styles/chart-tokens.css';
 
 // ── Actions ─────────────────────────────────────────────────────────────────

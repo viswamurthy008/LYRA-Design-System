@@ -2,7 +2,7 @@ import type { StorybookConfig } from '@storybook/react-vite';
 import tailwindcss from '@tailwindcss/vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(ts|tsx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
   addons: ['@storybook/addon-docs', '@storybook/addon-a11y'],
   framework: {
     name: '@storybook/react-vite',
@@ -13,7 +13,14 @@ const config: StorybookConfig = {
   async viteFinal(viteConfig) {
     viteConfig.plugins = viteConfig.plugins ?? [];
     viteConfig.plugins.push(tailwindcss());
-    return viteConfig;
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(viteConfig, {
+      resolve: {
+        // The MDX loader injects the docs JSX shim as a file:/// URL, which
+        // Rollup can't resolve on Windows — strip the scheme back to a path.
+        alias: [{ find: /^file:\/\/\//, replacement: '' }],
+      },
+    });
   },
 };
 

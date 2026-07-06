@@ -11,5 +11,5 @@
 .ds-skeleton {
   display: block;
   background: var(--color-bg-muted);
-  animation: ds-skeleton-pulse 1.4s ease-in-out infinite;
+  animation: ds-skeleton-pulse var(--motion-duration-pulse, 1400ms) ease-in-out infinite;
 }

@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Choosing Feedback" />
+
+# Choosing a Feedback Component
+
+LYRA has several overlapping ways to tell the user something happened. Pick by **urgency,
+persistence, and placement** — not by looks.
+
+| Component | Placement | Persists? | Interrupts? | Use when |
+|---|---|---|---|---|
+| **Alert** | Inline, in the content flow | Yes, until resolved | No | The message belongs to a specific section or form — validation summaries, contextual warnings |
+| **Banner** | Full-width, top of page/app | Yes, dismissible | Mildly | App-wide state: maintenance windows, plan limits, degraded service |
+| **Toast** | Corner, floating | Auto-dismisses | No | Confirmation of a completed action ("Saved", "Copied") — never for errors the user must fix |
+| **Snackbar** | Bottom, floating | Auto-dismisses | No | Like Toast but with a single action ("Undo") |
+| **Modal** | Center overlay | Until answered | **Yes** | A decision is required before anything else can continue |
+| **Tooltip** | Anchored to a control | While hovered/focused | No | Clarifying an icon or truncated label — never essential information |
+| **Popover** | Anchored, click-opened | Until dismissed | No | Rich contextual help or small forms attached to a trigger |
+| **NotificationCenter** | Dropdown panel | Yes, listed | No | A history of asynchronous events the user may review later |
+
+## Rules of thumb
+
+- **Errors the user must fix** → `Alert` next to the problem (plus `FormField error` for fields).
+  Never a Toast — it disappears before the user can act.
+- **Success confirmations** → `Toast`/`Snackbar`. Don't use a Modal to say "it worked."
+- **One message per event.** Don't stack a Toast *and* a Banner for the same action.
+- **Modal is a last resort.** If the user can safely continue, prefer an inline or floating channel.
+- Async, non-urgent events (mentions, completed exports) accumulate in `NotificationCenter`,
+  optionally announced once with a Toast.
+
+## Progress & loading
+
+- Known duration or percentage → `Progress` (linear) or `CircularProgress` (compact/radial).
+- Unknown duration, short → `Spinner`. Unknown, content-shaped → `Skeleton`.
+- Empty results are not errors → `EmptyState` with a next action.

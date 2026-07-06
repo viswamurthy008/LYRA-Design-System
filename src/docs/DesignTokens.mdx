@@ -1,0 +1,76 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Design Tokens" />
+
+# Design Tokens
+
+Every component is styled exclusively with CSS custom properties. Tokens come in three files,
+all loaded automatically when you import anything from the library:
+
+| File | Owns | Source of truth |
+|---|---|---|
+| `styles/tokens.css` | Color (primitives + semantic), spacing, radius | Generated from the Figma variables — **do not edit by hand** |
+| `styles/foundation-tokens.css` | Typography, motion, breakpoints, z-index | Mirrors the Figma text styles |
+| `styles/chart-tokens.css` | Categorical chart palette (`--color-chart-1…8`) | Hand-maintained, light + dark |
+
+**Rule: components reference semantic tokens only** — `var(--color-action-primary)`, never
+`var(--blue-600)` or a raw hex. Re-theming (including dark mode) is then a token-layer change.
+
+## Color (semantic)
+
+| Token | Use for |
+|---|---|
+| `--color-bg-default / -subtle / -muted` | Page and surface backgrounds, in increasing depth |
+| `--color-bg-brand / -brand-subtle` | Brand fills; subtle = selected/tinted rows |
+| `--color-bg-success / -warning / -danger` | Status tints behind text |
+| `--color-text-default / -subtle / -placeholder / -disabled / -inverse` | Text hierarchy |
+| `--color-text-brand / -success / -warning / -danger` | Status + link text |
+| `--color-border-default / -strong / -brand / -danger` | Dividers, inputs, focus, error |
+| `--color-icon-default / -subtle / -brand` | Icon strokes |
+| `--color-action-primary / -hover / -pressed` | Buttons and interactive fills |
+
+Dark mode: set `data-theme="dark"` on `<html>` (or a `.dark` wrapper). Only the semantic layer
+remaps — components need no changes.
+
+## Typography
+
+Font stacks: `--font-family-sans` (Inter) and `--font-family-mono` (IBM Plex Mono).
+Weights: `--font-weight-regular/medium/semibold/bold` (400/500/600/700).
+
+| Style | Size / Line | Tokens |
+|---|---|---|
+| Display XL / Lg / Md | 72 · 56/64 · 48/56 | `--text-display-*` |
+| Heading H1–H4 | 40/48 · 32/40 · 24/32 · 20/28 | `--text-h1-*` … `--text-h4-*` |
+| Body Lg / Md / Sm | 18/28 · 16/24 · 14/20 | `--text-body-*` |
+| Label Lg / Md / Sm | 14/20 · 12/16 · 11/16 | `--text-label-*` |
+| Caption / Overline / Code | 12/16 · 11 · 14 | `--text-caption-*`, `--text-overline-*`, `--text-code-*` |
+
+## Spacing & radius
+
+Spacing: `--spacing-1` (4px) through `--spacing-16` (64px) on a 4px base grid.
+Radius: `--radius-sm` 4 · `--radius-md` 8 · `--radius-lg` 12 · `--radius-xl` 16 · `--radius-full`.
+
+## Motion
+
+| Token | Value | Use for |
+|---|---|---|
+| `--motion-duration-instant` | 75ms | Immediate feedback (press states) |
+| `--motion-duration-fast` | 120ms | Micro-interactions: hover, toggles, chevrons |
+| `--motion-duration-base` | 200ms | Standard transitions: progress, panels |
+| `--motion-duration-slow` | 300ms | Larger movements: carousel slides |
+| `--motion-duration-spin` / `-pulse` | 700ms / 1400ms | Spinners, skeleton shimmer |
+| `--motion-ease-standard / -decelerate / -accelerate` | cubic-beziers | Pair with the durations |
+
+`prefers-reduced-motion: reduce` zeroes the transition durations automatically (loaders keep
+animating — they convey state, not decoration).
+
+## Breakpoints
+
+`--breakpoint-sm` 640 · `--breakpoint-md` 768 · `--breakpoint-lg` 1024 · `--breakpoint-xl` 1280 ·
+`--breakpoint-2xl` 1536. CSS media queries can't consume variables — these are the documented
+source of truth; read them from JS or keep raw values in media queries consistent with them.
+
+## Z-index scale
+
+`--z-dropdown` 20 → `--z-sticky` 30 → `--z-overlay` 50 (modal/drawer) → `--z-toast` 70 →
+`--z-tour` 90 → `--z-tooltip` 100. Never hardcode a z-index above a layer you don't own.

@@ -21,7 +21,7 @@
 .ds-tree__caret {
   color: var(--color-icon-subtle);
   font-size: 11px;
-  transition: transform 120ms ease;
+  transition: transform var(--motion-duration-fast, 120ms) ease;
 }
 .ds-tree__caret--open {
   transform: rotate(90deg);

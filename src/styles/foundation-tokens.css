@@ -1,0 +1,108 @@
+/* Foundation tokens — typography, motion, breakpoints, z-index.
+   Layered on top of tokens.css (generated, color/spacing/radius) — kept separate
+   because that file is owned by the token exporter.
+   Typography mirrors the Figma text styles 1:1 (Display, Heading, Body, Label,
+   Caption, Overline, Code). */
+:root {
+  /* ── Font families ── */
+  --font-family-sans: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-family-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ── Font weights ── */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ── Type scale (size / line-height / letter-spacing / weight) ── */
+  --text-display-xl-size: 72px;
+  --text-display-xl-line: 1.08;
+  --text-display-xl-weight: var(--font-weight-bold);
+  --text-display-lg-size: 56px;
+  --text-display-lg-line: 64px;
+  --text-display-lg-tracking: -1.5px;
+  --text-display-lg-weight: var(--font-weight-bold);
+  --text-display-md-size: 48px;
+  --text-display-md-line: 56px;
+  --text-display-md-tracking: -1px;
+  --text-display-md-weight: var(--font-weight-bold);
+
+  --text-h1-size: 40px;
+  --text-h1-line: 48px;
+  --text-h1-tracking: -0.5px;
+  --text-h1-weight: var(--font-weight-bold);
+  --text-h2-size: 32px;
+  --text-h2-line: 40px;
+  --text-h2-tracking: -0.25px;
+  --text-h2-weight: var(--font-weight-bold);
+  --text-h3-size: 24px;
+  --text-h3-line: 32px;
+  --text-h3-weight: var(--font-weight-semibold);
+  --text-h4-size: 20px;
+  --text-h4-line: 28px;
+  --text-h4-weight: var(--font-weight-semibold);
+
+  --text-body-lg-size: 18px;
+  --text-body-lg-line: 28px;
+  --text-body-md-size: 16px;
+  --text-body-md-line: 24px;
+  --text-body-sm-size: 14px;
+  --text-body-sm-line: 20px;
+
+  --text-label-lg-size: 14px;
+  --text-label-lg-line: 20px;
+  --text-label-lg-tracking: 0.1px;
+  --text-label-md-size: 12px;
+  --text-label-md-line: 16px;
+  --text-label-md-tracking: 0.3px;
+  --text-label-sm-size: 11px;
+  --text-label-sm-line: 16px;
+  --text-label-sm-tracking: 0.5px;
+  --text-label-weight: var(--font-weight-medium);
+
+  --text-caption-size: 12px;
+  --text-caption-line: 16px;
+  --text-caption-tracking: 0.4px;
+  --text-overline-size: 11px;
+  --text-overline-tracking: 0.08em;
+  --text-overline-weight: var(--font-weight-medium);
+  --text-code-size: 14px;
+  --text-code-line: 1.5;
+
+  /* ── Motion ── */
+  --motion-duration-instant: 75ms;
+  --motion-duration-fast: 120ms; /* micro-interactions: hover, toggle, chevron */
+  --motion-duration-base: 200ms; /* standard transitions: progress, panels */
+  --motion-duration-slow: 300ms; /* larger movements: carousel, drawers */
+  --motion-duration-spin: 700ms; /* spinners / indeterminate loops */
+  --motion-duration-pulse: 1400ms; /* skeleton shimmer */
+  --motion-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --motion-ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+  /* ── Breakpoints (reference values — CSS media queries can't consume vars,
+        use these from JS or as the documented source of truth) ── */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ── Z-index scale ── */
+  --z-dropdown: 20;
+  --z-sticky: 30;
+  --z-overlay: 50; /* modal / drawer / command palette */
+  --z-toast: 70;
+  --z-tour: 90;
+  --z-tooltip: 100;
+}
+
+/* Respect users who opt out of animation. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-instant: 0ms;
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+  }
+}

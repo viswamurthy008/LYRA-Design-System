@@ -10,7 +10,7 @@
   border-style: solid;
   border-color: var(--color-bg-muted);
   border-top-color: var(--color-action-primary);
-  animation: ds-spin 700ms linear infinite;
+  animation: ds-spin var(--motion-duration-spin, 700ms) linear infinite;
 }
 .ds-spinner--sm {
   width: 20px;
