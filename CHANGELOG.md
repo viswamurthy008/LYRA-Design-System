@@ -3,6 +3,20 @@
 All notable changes to `lyra-design-system`. Follows [semver](https://semver.org):
 minor = additive components/tokens, patch = fixes, major = breaking API changes.
 
+## [1.9.0] — 2026-07-06
+
+### Added
+- `Toolbar` (filter/action bar) and `Footer` (page footer) — components + Figma + Code Connect.
+- `Button`: `loading` (inline spinner + aria-busy), `iconLeft`/`iconRight` props.
+- `Checkbox`: `indeterminate` (mixed) state. `Progress`: `indeterminate` animation.
+- `error` state on `Combobox`, `MultiSelect`, `OtpInput` (danger border + `aria-invalid`).
+- `ChartLegend` and `CHART_COLORS` exported for composing custom charts.
+- Focus-ring tokens (`--focus-ring-color/width/offset/halo`).
+- Accessibility doc: measured WCAG contrast table for all token pairs, focus-ring spec,
+  touch-target guidance, and an explicit desktop-first platform decision.
+- Figma: 27 Hover/Pressed/Focus variants on the Button set; Cover now shows version/owner/
+  status; the legacy File Upload frame renamed to "Dropzone States" to resolve the duplicate.
+
 ## [1.8.0] — 2026-07-06
 
 ### Added

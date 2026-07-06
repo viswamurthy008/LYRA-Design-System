@@ -59,3 +59,27 @@
 .ds-btn--ghost:hover:not(:disabled) {
   background: var(--color-bg-brand-subtle);
 }
+.ds-btn__icon {
+  display: inline-flex;
+  margin: 0 6px;
+}
+.ds-btn__icon:first-child {
+  margin-left: 0;
+}
+.ds-btn__icon:last-child {
+  margin-right: 0;
+}
+.ds-btn__spinner {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-full);
+  animation: ds-btn-spin var(--motion-duration-spin, 700ms) linear infinite;
+}
+@keyframes ds-btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -26,3 +26,5 @@ export const Full: Story = {
     </div>
   ),
 };
+
+export const Indeterminate: Story = { args: { label: 'Uploading…', indeterminate: true } };

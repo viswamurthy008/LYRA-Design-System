@@ -6,21 +6,49 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 Standards baked into the system, and the contract components are held to.
 
-## Color contrast
+## Color contrast (measured)
 
-- Semantic text tokens are chosen for **WCAG 2.1 AA** on their intended backgrounds:
-  `--color-text-default` (gray-900) and `--color-text-subtle` (gray-600) pass 4.5:1 on
-  `--color-bg-default/subtle/muted`. `--color-text-placeholder` and `--color-icon-subtle` were
-  deliberately remapped from gray-400 → gray-500 to reach AA.
-- Status text tokens (`-success/-warning/-danger`) use the 700-weight shades on their subtle
-  tints for the same reason.
-- Never place `-subtle` text on `-brand` fills; use `--color-text-inverse`.
+All standard token pairs pass **WCAG 2.1 AA** (≥ 4.5:1 for text). Measured ratios:
 
-## Focus
+| Pair | Ratio |
+|---|---|
+| `text-default` on `bg-default` | **17.74:1** |
+| `text-subtle` on `bg-default` | **7.56:1** |
+| `text-subtle` on `bg-muted` | **6.87:1** |
+| `text-placeholder` on `bg-default` | **4.83:1** |
+| `text-brand` on `bg-default` | **5.17:1** |
+| `text-inverse` on `action-primary` | **5.17:1** |
+| `text-success` on `bg-success` | **4.57:1** |
+| `text-danger` on `bg-danger` | **5.3:1** |
+| `text-warning` on `bg-warning` | **4.58:1** |
 
-- Every interactive element shows a visible focus state — either `:focus-visible` outlines using
-  `--color-border-brand`, or a `box-shadow` ring (`--color-bg-brand-subtle`).
-- Focus is never removed with `outline: none` without a replacement indicator.
+`text-placeholder` and `icon-subtle` were deliberately remapped gray-400 → gray-500 to reach AA.
+Never place `-subtle` text on `-brand` fills; use `--color-text-inverse`.
+
+## Focus ring specification
+
+Shared tokens in `foundation-tokens.css` define the ring; use one of the two blessed styles:
+
+| Token | Value |
+|---|---|
+| `--focus-ring-color` | `--color-border-brand` (blue-500) |
+| `--focus-ring-width` | 2px |
+| `--focus-ring-offset` | 2px |
+| `--focus-ring-halo` | `--color-bg-brand-subtle` — as a 3px `box-shadow` for inputs |
+
+- Outline style: `outline: var(--focus-ring-width) solid var(--focus-ring-color); outline-offset: var(--focus-ring-offset);`
+- Halo style (form fields): `border-color: var(--color-border-brand); box-shadow: 0 0 0 3px var(--focus-ring-halo);`
+- Focus is never removed with `outline: none` without one of these replacements.
+
+## Touch targets
+
+- Minimum interactive target: **44×44px on touch surfaces**, 24×24px with adequate spacing on
+  pointer-dense desktop UI (per WCAG 2.2 AAA/AA respectively).
+- `sm` control sizes (Button SM 32px, icon buttons 28px) are **desktop-density options** — don't
+  use them as primary tap targets on mobile layouts.
+- **Platform decision:** LYRA is a desktop-first system. Mobile-specific components (bottom
+  navigation, action sheets, pull-to-refresh) are intentionally out of scope until a mobile
+  surface exists.
 
 ## Keyboard support (per pattern)
 

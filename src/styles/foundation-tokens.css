@@ -88,6 +88,12 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
+  /* ── Focus ring (shared spec for all interactive components) ── */
+  --focus-ring-color: var(--color-border-brand);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-halo: var(--color-bg-brand-subtle); /* soft 3px box-shadow alternative */
+
   /* ── Z-index scale ── */
   --z-dropdown: 20;
   --z-sticky: 30;

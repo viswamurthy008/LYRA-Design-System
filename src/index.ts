@@ -1,7 +1,7 @@
 // ============================================================================
 //  @acme/design-system — public API
 //  React + TypeScript components styled with CSS variables (src/styles/tokens.css).
-//  Mirrors the Figma "Design System — MVP" library. 87 components.
+//  Mirrors the Figma "Design System — MVP" library. 89 components.
 // ============================================================================
 import './styles/tokens.css';
 import './styles/foundation-tokens.css';
@@ -110,6 +110,7 @@ export type {
 } from './components/DescriptionList/DescriptionList';
 
 // ── Charts ────────────────────────────────────────────────────────────────--
+export { ChartLegend, CHART_COLORS } from './components/chartUtils';
 export { Sparkline } from './components/Sparkline/Sparkline';
 export type { SparklineProps } from './components/Sparkline/Sparkline';
 export { MiniBarChart } from './components/MiniBarChart/MiniBarChart';
@@ -212,6 +213,10 @@ export { Container } from './components/Container/Container';
 export type { ContainerProps } from './components/Container/Container';
 export { Splitter } from './components/Splitter/Splitter';
 export type { SplitterProps } from './components/Splitter/Splitter';
+export { Toolbar } from './components/Toolbar/Toolbar';
+export type { ToolbarProps } from './components/Toolbar/Toolbar';
+export { Footer } from './components/Footer/Footer';
+export type { FooterProps, FooterColumn } from './components/Footer/Footer';
 
 // ── Utility ─────────────────────────────────────────────────────────────────
 export { Icon, ICON_NAMES } from './components/Icon/Icon';

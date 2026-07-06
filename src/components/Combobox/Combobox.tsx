@@ -12,6 +12,8 @@ export interface ComboboxProps {
   value?: string;
   onChange?: (value: string) => void;
   placeholder?: string;
+  /** Marks the field invalid (danger border + aria-invalid). */
+  error?: boolean;
   className?: string;
 }
 
@@ -22,6 +24,7 @@ export function Combobox({
   value,
   onChange,
   placeholder = 'Search…',
+  error = false,
   className = '',
 }: ComboboxProps) {
   const [query, setQuery] = useState('');
@@ -31,11 +34,12 @@ export function Combobox({
   return (
     <div className={`ds-combobox ${className}`.trim()}>
       {label && <label className="ds-combobox__label">{label}</label>}
-      <div className="ds-combobox__control">
+      <div className={`ds-combobox__control${error ? ' ds-combobox__control--error' : ''}`}>
         <span className="ds-combobox__icon" aria-hidden="true">
           ⌕
         </span>
         <input
+          aria-invalid={error || undefined}
           className="ds-combobox__input"
           value={query}
           placeholder={placeholder}

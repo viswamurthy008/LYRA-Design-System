@@ -28,7 +28,7 @@ function Example() {
 - Components reference **semantic** variables only (`var(--color-action-primary)`, `var(--spacing-4)`, `var(--radius-md)`), so re-theming is a one-file change.
 - Each component ships a co-located `Component.css`. Importing the component imports its styles.
 
-## Components (87)
+## Components (89)
 
 | Group | Components |
 |-------|-----------|
@@ -40,7 +40,7 @@ function Example() {
 | **Feedback** | Alert, Banner, Toast, Snackbar, Tooltip, Popover, Progress, CircularProgress, Spinner, Skeleton, EmptyState, NotificationCenter |
 | **Navigation** | Tabs, Breadcrumb, Pagination, Accordion, Stepper, Timeline, Navbar, Sidebar, TreeView |
 | **Overlays** | Modal, Drawer, CommandPalette, ContextMenu, Tour |
-| **Layout** | AppShell, Stack, Grid, Container, Splitter |
+| **Layout** | AppShell, Stack, Grid, Container, Splitter, Toolbar, Footer |
 | **Utility** | Kbd, Code, Icon (28-icon set) |
 
 All are exported from `src/index.ts`, grouped by category, with full TypeScript prop types.

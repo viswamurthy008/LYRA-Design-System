@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from './Button';
+import { Icon } from '../Icon/Icon';
 
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
@@ -67,6 +68,18 @@ export const Showcase: Story = {
           {v}
         </Button>
       ))}
+    </div>
+  ),
+};
+
+export const Loading: Story = { args: { children: 'Saving…', loading: true } };
+export const WithIcons: Story = {
+  render: () => (
+    <div style={{ display: 'flex', gap: 12 }}>
+      <Button iconLeft={<Icon name="plus" size={16} />}>Add item</Button>
+      <Button variant="secondary" iconRight={<Icon name="arrow-right" size={16} />}>
+        Continue
+      </Button>
     </div>
   ),
 };

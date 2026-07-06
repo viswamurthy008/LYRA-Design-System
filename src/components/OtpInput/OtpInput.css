@@ -19,3 +19,6 @@
   border-color: var(--color-border-brand);
   box-shadow: 0 0 0 3px var(--color-bg-brand-subtle);
 }
+.ds-otp__cell--error {
+  border-color: var(--color-border-danger);
+}

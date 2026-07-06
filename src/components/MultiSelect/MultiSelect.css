@@ -87,3 +87,6 @@
 .ds-multiselect__option--active {
   background: var(--color-bg-subtle);
 }
+.ds-multiselect__control--error {
+  border-color: var(--color-border-danger);
+}

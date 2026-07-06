@@ -69,3 +69,6 @@
   background: var(--color-bg-brand-subtle);
   color: var(--color-text-brand);
 }
+.ds-combobox__control--error {
+  border-color: var(--color-border-danger);
+}

@@ -14,6 +14,8 @@ export interface MultiSelectProps {
   value: string[];
   onChange?: (value: string[]) => void;
   placeholder?: string;
+  /** Marks the field invalid (danger border + aria-invalid). */
+  error?: boolean;
   className?: string;
 }
 
@@ -26,6 +28,7 @@ export function MultiSelect({
   value,
   onChange,
   placeholder = 'Select…',
+  error = false,
   className = '',
 }: MultiSelectProps) {
   const [open, setOpen] = useState(false);
@@ -77,8 +80,9 @@ export function MultiSelect({
         </span>
       )}
       <div
-        className="ds-multiselect__control"
+        className={`ds-multiselect__control${error ? ' ds-multiselect__control--error' : ''}`}
         role="combobox"
+        aria-invalid={error || undefined}
         tabIndex={0}
         aria-expanded={open}
         aria-haspopup="listbox"

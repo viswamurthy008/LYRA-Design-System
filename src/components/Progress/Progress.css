@@ -23,3 +23,15 @@
   border-radius: var(--radius-full);
   transition: width var(--motion-duration-base, 200ms) ease;
 }
+.ds-progress__fill--indeterminate {
+  width: 40%;
+  animation: ds-progress-slide 1200ms var(--motion-ease-standard, ease) infinite;
+}
+@keyframes ds-progress-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}

@@ -6,11 +6,19 @@ export interface OtpInputProps {
   length?: number;
   value: string;
   onChange?: (value: string) => void;
+  /** Marks the code invalid (danger borders + aria-invalid). */
+  error?: boolean;
   className?: string;
 }
 
 /** Segmented one-time-code input. Mirrors the Figma "OTP Input". */
-export function OtpInput({ length = 6, value, onChange, className = '' }: OtpInputProps) {
+export function OtpInput({
+  length = 6,
+  value,
+  onChange,
+  error = false,
+  className = '',
+}: OtpInputProps) {
   const refs = useRef<(HTMLInputElement | null)[]>([]);
   const setChar = (i: number, char: string) => {
     const next = value.split('');
@@ -34,7 +42,8 @@ export function OtpInput({ length = 6, value, onChange, className = '' }: OtpInp
           ref={(el) => {
             refs.current[i] = el;
           }}
-          className="ds-otp__cell"
+          className={`ds-otp__cell${error ? ' ds-otp__cell--error' : ''}`}
+          aria-invalid={error || undefined}
           inputMode="numeric"
           maxLength={1}
           value={value[i] ?? ''}
