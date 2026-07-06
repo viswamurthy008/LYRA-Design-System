@@ -32,6 +32,8 @@ Standards baked into the system, and the contract components are held to.
 | Splitter | Handle is a focusable `separator`; `←`/`→` resize |
 | OtpInput | Digits auto-advance; `Backspace` moves back |
 | Tour | `Skip`/`Back`/`Next` buttons; backdrop click closes |
+| MultiSelect | `↑`/`↓` move highlight, `Enter` selects, `Esc` closes, `Backspace` removes the last chip |
+| ContextMenu | Focus moves into the menu; `↑`/`↓`/`Home`/`End` navigate, `Enter` selects, `Esc` closes |
 
 ## ARIA conventions used
 
@@ -48,9 +50,8 @@ Loaders (Spinner, Skeleton) keep animating because they communicate state.
 
 ## Known gaps (tracked)
 
-The ~24 accepted lint warnings mark real keyboard limitations, kept as warnings deliberately:
+The remaining accepted lint warnings mark real limitations, kept as warnings deliberately:
 
-- `MultiSelect` and `ContextMenu` option lists are click-only (no arrow-key navigation yet).
 - Overlay backdrops close on click without a keyboard equivalent beyond `Esc`.
 - `DataTable` sortable headers rely on click.
 

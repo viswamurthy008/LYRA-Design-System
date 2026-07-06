@@ -18,14 +18,21 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
+  width: 100%;
   padding: 8px 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-family: inherit;
   border-radius: var(--radius-sm);
   font-size: 14px;
   color: var(--color-text-default);
   cursor: pointer;
 }
-.ds-contextmenu__item:hover {
+.ds-contextmenu__item:hover,
+.ds-contextmenu__item:focus-visible {
   background: var(--color-bg-subtle);
+  outline: none;
 }
 .ds-contextmenu__item--danger {
   color: var(--color-text-danger);

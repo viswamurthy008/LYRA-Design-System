@@ -23,8 +23,11 @@
   border-radius: var(--radius-md);
   cursor: pointer;
 }
+.ds-multiselect__control:focus-visible,
 .ds-multiselect__control:focus-within {
   border-color: var(--color-border-brand);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-bg-brand-subtle);
 }
 .ds-multiselect__placeholder {
   color: var(--color-text-placeholder);
@@ -80,6 +83,7 @@
   color: var(--color-text-default);
   cursor: pointer;
 }
-.ds-multiselect__option:hover {
+.ds-multiselect__option:hover,
+.ds-multiselect__option--active {
   background: var(--color-bg-subtle);
 }

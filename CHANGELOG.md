@@ -3,6 +3,22 @@
 All notable changes to `lyra-design-system`. Follows [semver](https://semver.org):
 minor = additive components/tokens, patch = fixes, major = breaking API changes.
 
+## [1.7.0] — 2026-07-06
+
+### Added
+- **Patterns** section in Storybook: *Form Layout* (settings form with inline validation),
+  *Search & States* (loading / results / empty), *Onboarding* (first-run Tour).
+- **Content & Microcopy** guideline page (voice, capitalization, buttons, errors,
+  empty states, terminology).
+- `MultiSelect`: full keyboard support — ArrowUp/Down highlight, Enter selects, Esc closes,
+  Backspace removes the last chip; ARIA combobox semantics (`aria-expanded`,
+  `aria-activedescendant`).
+- `ContextMenu`: items are real `menuitem` buttons; focus moves into the menu on open,
+  ArrowUp/Down/Home/End navigate, Enter selects, Esc closes.
+
+### Changed
+- 4 accepted jsx-a11y warnings resolved by the keyboard work (26 → 22).
+
 ## [1.6.0] — 2026-07-06
 
 ### Added
