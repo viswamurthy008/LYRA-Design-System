@@ -67,3 +67,20 @@
   font-size: 13px;
   color: var(--color-text-subtle);
 }
+.ds-table-wrap--compact .ds-table thead th {
+  padding: 6px 12px;
+}
+.ds-table-wrap--compact .ds-table tbody td {
+  padding: 6px 12px;
+}
+.ds-table__skeleton {
+  display: block;
+  height: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-muted);
+  animation: ds-skeleton-pulse var(--motion-duration-pulse, 1400ms) ease-in-out infinite;
+}
+.ds-table__empty {
+  text-align: center;
+  padding: var(--spacing-8) !important;
+}

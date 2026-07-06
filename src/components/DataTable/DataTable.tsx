@@ -21,6 +21,12 @@ export interface DataTableProps<T> {
   toolbar?: ReactNode;
   /** Optional footer node (pagination, counts). */
   footer?: ReactNode;
+  /** Row spacing preset for data-heavy views. */
+  density?: 'comfortable' | 'compact';
+  /** Replaces rows with skeleton placeholders. */
+  loading?: boolean;
+  /** Shown when `data` is empty (e.g. an <EmptyState/>). */
+  empty?: ReactNode;
   className?: string;
 }
 
@@ -34,6 +40,9 @@ export function DataTable<T extends Record<string, unknown>>({
   getRowId,
   toolbar,
   footer,
+  density = 'comfortable',
+  loading = false,
+  empty,
   className = '',
 }: DataTableProps<T>) {
   const [sort, setSort] = useState<SortState>(null);
@@ -59,7 +68,9 @@ export function DataTable<T extends Record<string, unknown>>({
     });
 
   return (
-    <div className={`ds-table-wrap ${className}`.trim()}>
+    <div
+      className={`ds-table-wrap${density === 'compact' ? ' ds-table-wrap--compact' : ''} ${className}`.trim()}
+    >
       {toolbar && <div className="ds-table__toolbar">{toolbar}</div>}
       <table className="ds-table">
         <thead>
@@ -92,15 +103,33 @@ export function DataTable<T extends Record<string, unknown>>({
           </tr>
         </thead>
         <tbody>
-          {sorted.map((row, i) => (
-            <tr key={getRowId ? getRowId(row, i) : i}>
-              {columns.map((c) => (
-                <td key={c.key} style={{ textAlign: c.align ?? 'left' }}>
-                  {c.render ? c.render(row) : (row[c.key] as ReactNode)}
-                </td>
-              ))}
+          {loading &&
+            Array.from({ length: 5 }).map((_, r) => (
+              <tr key={`sk-${r}`}>
+                {columns.map((c) => (
+                  <td key={c.key}>
+                    <span className="ds-table__skeleton" />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          {!loading && sorted.length === 0 && empty && (
+            <tr>
+              <td className="ds-table__empty" colSpan={columns.length}>
+                {empty}
+              </td>
             </tr>
-          ))}
+          )}
+          {!loading &&
+            sorted.map((row, i) => (
+              <tr key={getRowId ? getRowId(row, i) : i}>
+                {columns.map((c) => (
+                  <td key={c.key} style={{ textAlign: c.align ?? 'left' }}>
+                    {c.render ? c.render(row) : (row[c.key] as ReactNode)}
+                  </td>
+                ))}
+              </tr>
+            ))}
         </tbody>
       </table>
       {footer && <div className="ds-table__footer">{footer}</div>}

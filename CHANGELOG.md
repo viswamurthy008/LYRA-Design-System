@@ -3,6 +3,16 @@
 All notable changes to `lyra-design-system`. Follows [semver](https://semver.org):
 minor = additive components/tokens, patch = fixes, major = breaking API changes.
 
+## [1.10.0] — 2026-07-06
+
+### Added
+- `DataTable`: `density="compact"`, `loading` (skeleton rows), and `empty` slot —
+  covers the empty/loading table compositions without breaking the API.
+- Figma: **32 Hover/Focus state variants** across Checkbox, Toggle, Radio, Icon Button,
+  Chip, and Link sets (State axis added where missing).
+- Figma: two page-level pattern frames — *Patterns — Settings Form* and
+  *Patterns — Search & Empty State* — joining Sign in.
+
 ## [1.9.0] — 2026-07-06
 
 ### Added
