@@ -17,8 +17,9 @@ const config: StorybookConfig = {
     return mergeConfig(viteConfig, {
       resolve: {
         // The MDX loader injects the docs JSX shim as a file:/// URL, which
-        // Rollup can't resolve on Windows — strip the scheme back to a path.
-        alias: [{ find: /^file:\/\/\//, replacement: '' }],
+        // Rollup can't resolve as an import id — turn it back into a path.
+        // file:///C:/x → C:/x on Windows, file:///home/x → /home/x on POSIX.
+        alias: [{ find: /^file:\/\/\//, replacement: process.platform === 'win32' ? '' : '/' }],
       },
     });
   },
