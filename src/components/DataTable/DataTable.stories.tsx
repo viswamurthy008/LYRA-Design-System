@@ -20,9 +20,9 @@ export const Default: StoryObj = {
       data={data}
       getRowId={(r) => r.email}
       columns={[
-        { key: 'name', header: 'Name' },
+        { key: 'name', header: 'Name', sortable: true },
         { key: 'email', header: 'Email' },
-        { key: 'role', header: 'Role' },
+        { key: 'role', header: 'Role', sortable: true },
         {
           key: 'status',
           header: 'Status',

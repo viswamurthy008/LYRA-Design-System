@@ -3,6 +3,16 @@
 All notable changes to `lyra-design-system`. Follows [semver](https://semver.org):
 minor = additive components/tokens, patch = fixes, major = breaking API changes.
 
+## [1.8.0] — 2026-07-06
+
+### Added
+- `Icon` component — the full 28-icon Figma set in code (24×24 grid, 2px round stroke,
+  `currentColor`), with per-icon Code Connect mappings and an icon-gallery story.
+- `DataTable`: accessible column sorting — `sortable` columns render real header buttons,
+  cycle asc → desc → none, and set `aria-sort`.
+- **Brand & Iconography** guideline page (wordmark rules, brand color usage,
+  icon construction specs, usage/a11y rules).
+
 ## [1.7.0] — 2026-07-06
 
 ### Added

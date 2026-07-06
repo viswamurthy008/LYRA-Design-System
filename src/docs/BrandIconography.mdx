@@ -1,0 +1,54 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Brand & Iconography" />
+
+# Brand & Iconography
+
+## Wordmark
+
+- The LYRA wordmark is set in **Inter Bold**, sentence-spaced caps, in `--color-text-default`
+  on light surfaces or `--color-text-inverse` on dark/brand fills.
+- Clear space: keep at least the height of the "L" free on all sides. Minimum size: 24px tall.
+- Don't recolor the wordmark outside the token palette, add effects, stretch, or outline it.
+
+## Color in brand contexts
+
+- **Blue-600 (`--color-action-primary`) is the single brand accent.** Marketing surfaces may use
+  the blue ramp (`--blue-50…900`); product UI stays on the semantic tokens.
+- Status colors (green/yellow/red) are reserved for meaning — never decoration.
+- The categorical chart palette (`--color-chart-1…8`) is for data series only.
+
+## Iconography
+
+The icon set (28 icons, `Icon` component ↔ Figma `icon/*`) follows fixed construction rules:
+
+| Rule | Value |
+|---|---|
+| Grid | 24×24, content within a 20×20 live area |
+| Stroke | 2px, `round` caps and joins, no fills |
+| Color | `currentColor` — inherits text color; defaults to `--color-icon-default` |
+| Corner style | Rounded, geometric; match the existing set's simplicity |
+| Sizes | 16 (dense UI), 20 (buttons/inputs), 24 (default), 32 (feature spots) |
+
+Usage:
+
+```tsx
+<Icon name="star" />                        // decorative (aria-hidden)
+<Icon name="trash" title="Delete" />        // meaningful (role="img" + label)
+<span style={{ color: 'var(--color-icon-brand)' }}>
+  <Icon name="check" size={16} />
+</span>
+```
+
+- Icons are **decorative by default** (hidden from screen readers); pass `title` when the icon
+  is the only signifier.
+- Pair icons with labels in navigation and buttons wherever space allows; icon-only buttons
+  must use `IconButton` with an `aria-label`.
+- Adding an icon? Draw it on the 24px/2px-stroke grid in Figma first, add it to the `icon/*`
+  set, then export the path into `icon-paths.ts` — the two sets must stay identical.
+
+## Imagery & illustration
+
+Not yet defined — LYRA currently ships no photographic or illustration style. Until one exists,
+avoid ad-hoc imagery in product surfaces; use icons, charts, and `EmptyState` illustrations
+built from the existing geometric icon language.

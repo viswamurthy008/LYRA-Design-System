@@ -27,6 +27,27 @@
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
+.ds-table__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.ds-table__sort:hover,
+.ds-table__sort:focus-visible {
+  color: var(--color-text-default);
+  outline: none;
+}
+.ds-table__sort-arrow {
+  font-size: 10px;
+}
 .ds-table tbody td {
   padding: 12px 16px;
   color: var(--color-text-default);

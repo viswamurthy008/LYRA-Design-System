@@ -1,0 +1,6 @@
+.ds-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex: none;
+  color: var(--color-icon-default);
+}

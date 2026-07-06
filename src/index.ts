@@ -1,7 +1,7 @@
 // ============================================================================
 //  @acme/design-system — public API
 //  React + TypeScript components styled with CSS variables (src/styles/tokens.css).
-//  Mirrors the Figma "Design System — MVP" library. 86 components.
+//  Mirrors the Figma "Design System — MVP" library. 87 components.
 // ============================================================================
 import './styles/tokens.css';
 import './styles/foundation-tokens.css';
@@ -214,6 +214,8 @@ export { Splitter } from './components/Splitter/Splitter';
 export type { SplitterProps } from './components/Splitter/Splitter';
 
 // ── Utility ─────────────────────────────────────────────────────────────────
+export { Icon, ICON_NAMES } from './components/Icon/Icon';
+export type { IconProps, IconName } from './components/Icon/Icon';
 export { Kbd } from './components/Kbd/Kbd';
 export type { KbdProps } from './components/Kbd/Kbd';
 export { Code } from './components/Code/Code';
