@@ -46,8 +46,9 @@ function Example() {
 All are exported from `src/index.ts`, grouped by category, with full TypeScript prop types.
 
 Guideline docs (tokens, choosing feedback components, accessibility) live in Storybook under
-**Guidelines**. See [CHANGELOG.md](CHANGELOG.md) for release history and
-[CONTRIBUTING.md](CONTRIBUTING.md) for the component checklist and quality gates.
+**Guidelines**. See [CHANGELOG.md](CHANGELOG.md) for release history,
+[CONTRIBUTING.md](CONTRIBUTING.md) for the component checklist and quality gates, and
+[ROADMAP.md](ROADMAP.md) for what's next.
 
 ## Develop
 
